@@ -41,6 +41,13 @@ struct ContentView: View {
         modelContext.insert(florence)
         modelContext.insert(naples)
     }
+    
+    func deleteDestinations(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let destination = destinations[index]
+            modelContext.delete(destination)
+        }
+    }
 }
 
 #Preview {
