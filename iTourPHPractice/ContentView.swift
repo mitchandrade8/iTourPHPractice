@@ -24,6 +24,7 @@ struct ContentView: View {
                         Text(destination.date.formatted(date: .long, time: .shortened))
                     }
                 }
+                .onDelete(perform: deleteDestinations)
             }
             .navigationTitle("Trips")
             .toolbar {
