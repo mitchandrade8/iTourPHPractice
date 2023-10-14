@@ -32,7 +32,9 @@ struct ContentView: View {
     }
     
     func addSamples() {
-        
+        let rome = Destination(name: "Rome")
+        let florence = Destination(name: "Florence")
+        let naples = Destination(name: "Naples")
     }
 }
 
