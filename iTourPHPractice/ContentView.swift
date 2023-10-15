@@ -11,31 +11,12 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.modelContext) var modelContext
-    
-    // To handle more than one sort, use an array of sorts
-//    @Query(sort: \Destination.name, order: .reverse) var destinations: [Destination]
-    @Query(sort: [
-        SortDescriptor(\Destination.priority, order: .reverse),
-        SortDescriptor(\Destination.name)
-                 ]) var destinations: [Destination]
-    
+
     @State private var path = [Destination]()
     
     var body: some View {
         NavigationStack(path: $path) {
-            List {
-                ForEach(destinations) { destination in
-                    NavigationLink(value: destination) {
-                        VStack(alignment: .leading) {
-                            Text(destination.name)
-                                .font(.headline)
-                            
-                            Text(destination.date.formatted(date: .long, time: .shortened))
-                        }
-                    }
-                }
-                .onDelete(perform: deleteDestinations)
-            }
+            DestinationListingView()
             .navigationTitle("Trips")
             .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
             .toolbar {
@@ -61,12 +42,7 @@ struct ContentView: View {
         path = [destination]
     }
     
-    func deleteDestinations(_ indexSet: IndexSet) {
-        for index in indexSet {
-            let destination = destinations[index]
-            modelContext.delete(destination)
-        }
-    }
+   
 }
 
 #Preview {
