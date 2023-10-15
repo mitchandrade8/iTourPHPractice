@@ -45,3 +45,4 @@ struct DestinationListingView: View {
 #Preview {
     DestinationListingView()
 }
+

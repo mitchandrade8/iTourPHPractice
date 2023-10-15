@@ -14,6 +14,8 @@ struct ContentView: View {
 
     @State private var path = [Destination]()
     
+    @State private var sortOrder = SortDescriptor(\Destination.name)
+    
     var body: some View {
         NavigationStack(path: $path) {
             DestinationListingView()
@@ -41,8 +43,6 @@ struct ContentView: View {
         modelContext.insert(destination)
         path = [destination]
     }
-    
-   
 }
 
 #Preview {
