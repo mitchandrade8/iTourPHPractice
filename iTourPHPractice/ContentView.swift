@@ -12,7 +12,10 @@ struct ContentView: View {
     
     @Environment(\.modelContext) var modelContext
     @State private var path = [Destination]()
+    // Track user filter
     @State private var sortOrder = SortDescriptor(\Destination.name)
+    // Track user keyboard/ what the user is typing
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack(path: $path) {

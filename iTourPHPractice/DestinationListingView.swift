@@ -35,7 +35,11 @@ struct DestinationListingView: View {
     }
     
     init(sort: SortDescriptor<Destination>) {
-        _destinations = Query(sort: [sort])
+        let now = Date.now
+        
+        _destinations = Query(filter: #Predicate {
+            $0.date > now
+        }, sort: [sort])
     }
     
     func deleteDestinations(_ indexSet: IndexSet) {
