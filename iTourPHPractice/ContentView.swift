@@ -11,7 +11,14 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.modelContext) var modelContext
-    @Query var destinations: [Destination]
+    
+    // To handle more than one sort, use an array of sorts
+//    @Query(sort: \Destination.name, order: .reverse) var destinations: [Destination]
+    @Query(sort: [
+        SortDescriptor(\Destination.priority, order: .reverse),
+        SortDescriptor(\Destination.name)
+                 ]) var destinations: [Destination]
+    
     @State private var path = [Destination]()
     
     var body: some View {
