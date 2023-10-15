@@ -34,11 +34,14 @@ struct DestinationListingView: View {
         }
     }
     
-    init(sort: SortDescriptor<Destination>) {
-        let now = Date.now
-        
+    init(sort: SortDescriptor<Destination>, searchString: String) {
         _destinations = Query(filter: #Predicate {
-            $0.date > now
+            if searchString.isEmpty {
+                return true
+            } else {
+                // User checking strings in Swift
+                return $0.name.localizedStandardContains(searchString)
+            }
         }, sort: [sort])
     }
     
@@ -51,6 +54,6 @@ struct DestinationListingView: View {
 }
 
 #Preview {
-    DestinationListingView(sort: SortDescriptor(\Destination.name))
+    DestinationListingView(sort: SortDescriptor(\Destination.name), searchString: "")
 }
 

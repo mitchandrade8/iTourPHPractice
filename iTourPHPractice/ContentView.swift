@@ -19,9 +19,10 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack(path: $path) {
-            DestinationListingView(sort: sortOrder)
+            DestinationListingView(sort: sortOrder, searchString: searchText)
             .navigationTitle("Trips")
             .navigationDestination(for: Destination.self, destination: EditDestinationView.init)
+            .searchable(text: $searchText)
             .toolbar {
                 Button("Add Destination", systemImage: "plus", action: addDestination)
                 
