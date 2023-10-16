@@ -11,6 +11,7 @@ import SwiftData
 struct EditDestinationView: View {
     
     @Bindable var destination: Destination
+    @State private var newSightName = ""
     
     var body: some View {
         Form {
@@ -29,6 +30,12 @@ struct EditDestinationView: View {
         }
         .navigationTitle("Edit Destination")
         .navigationBarTitleDisplayMode(.inline)
+    }
+    
+    func addSight() {
+        guard newSightName.isEmpty == false { return }
+        
+        
     }
 }
 

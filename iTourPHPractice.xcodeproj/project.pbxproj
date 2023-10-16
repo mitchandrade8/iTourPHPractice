@@ -16,6 +16,7 @@
 		7444AF6B2ADC8888008CC60C /* DestinationListingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444AF6A2ADC8888008CC60C /* DestinationListingView.swift */; };
 		7444AF6D2ADC8B5E008CC60C /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444AF6C2ADC8B5E008CC60C /* Notes.swift */; };
 		7444AF6F2ADC8B69008CC60C /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444AF6E2ADC8B69008CC60C /* Questions.swift */; };
+		7444AF712ADCED1A008CC60C /* Sight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444AF702ADCED1A008CC60C /* Sight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		7444AF6A2ADC8888008CC60C /* DestinationListingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationListingView.swift; sourceTree = "<group>"; };
 		7444AF6C2ADC8B5E008CC60C /* Notes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		7444AF6E2ADC8B69008CC60C /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		7444AF702ADCED1A008CC60C /* Sight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sight.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7444AF582ADAF6A7008CC60C /* iTourPHPracticeApp.swift */,
 				7444AF5A2ADAF6A7008CC60C /* ContentView.swift */,
 				7444AF6A2ADC8888008CC60C /* DestinationListingView.swift */,
+				7444AF702ADCED1A008CC60C /* Sight.swift */,
 				7444AF682ADB228E008CC60C /* EditDestinationView.swift */,
 				7444AF662ADAFBDF008CC60C /* Destination.swift */,
 				7444AF6C2ADC8B5E008CC60C /* Notes.swift */,
@@ -154,6 +157,7 @@
 			files = (
 				7444AF5B2ADAF6A7008CC60C /* ContentView.swift in Sources */,
 				7444AF592ADAF6A7008CC60C /* iTourPHPracticeApp.swift in Sources */,
+				7444AF712ADCED1A008CC60C /* Sight.swift in Sources */,
 				7444AF672ADAFBDF008CC60C /* Destination.swift in Sources */,
 				7444AF6F2ADC8B69008CC60C /* Questions.swift in Sources */,
 				7444AF692ADB228E008CC60C /* EditDestinationView.swift in Sources */,
